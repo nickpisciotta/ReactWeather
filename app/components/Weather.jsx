@@ -41,7 +41,7 @@ var Weather = React.createClass({
   }, 
   componentWillReceiveProps: function (newProps) {
     var location = newProps.location.query.location; 
-    
+
     if (location && location.length > 0) {
       this.handleSearch(location); 
       window.location.hash ='#/'; 
@@ -61,7 +61,7 @@ var Weather = React.createClass({
     function renderError () {
       if (typeof errorMessage === 'string') {
         return (
-          <ErrorModal message={{errorMessage}}/> 
+          <ErrorModal message={errorMessage}/> 
         )
       }
     }
